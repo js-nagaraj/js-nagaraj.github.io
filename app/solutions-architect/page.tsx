@@ -4,30 +4,51 @@ export const metadata = {
 };
 
 export default function ArchitectPage() {
+  const expertise = [
+    "Reference architectures for web, data, and event-driven systems",
+    "Hybrid networking, private connectivity, and multi-region topology planning",
+    "Managed databases, caching, streaming analytics, backup, and disaster recovery",
+    "Security architecture with IAM, zero trust controls, KMS, and governance policies",
+    "Cost architecture with right-sizing, savings plans, and egress optimization",
+  ];
+
+  const designs = [
+    "Multi-region active-active AWS setup with global routing and failover",
+    "Azure landing zone with Hub-Spoke model, PIM, and BCDR automation",
+    "GCP data platform with Pub/Sub, Dataflow, BigQuery, and Looker",
+  ];
+
   return (
-    <section>
-      <h1>Multi‑Cloud Solutions Architect</h1>
-      <p>
-        I build cloud architectures that balance reliability, security, performance, and cost.
-        Experience spans greenfield builds, migrations, and modernization at scale.
-      </p>
+    <main className="subpage">
+      <section className="subpageHero">
+        <p className="subpageKicker">Solutions Architecture</p>
+        <h1>Scalable multi-cloud architecture with security and cost in balance</h1>
+        <p>
+          I design cloud blueprints that align reliability, performance, security, and
+          cost objectives for both new systems and modernization programs.
+        </p>
+      </section>
 
-      <h2>Core Expertise</h2>
-      <ul>
-        <li>Reference architectures for web, data, and event‑driven workloads</li>
-        <li>Networking: hybrid, private connectivity, service mesh, multi‑region</li>
-        <li>Data: managed DBs, caching, streaming, analytics, backup and DR</li>
-        <li>Security: IAM, zero trust, KMS, secrets, threat detection, governance</li>
-        <li>Cost: right‑sizing, savings plans/reserved instances, egress reduction</li>
-      </ul>
+      <section className="subpageGrid">
+        <article className="subpageCard">
+          <h2>Core Expertise</h2>
+          <ul>
+            {expertise.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
 
-      <h2>Selected Designs</h2>
-      <ul>
-        <li>Multi‑region active‑active on AWS with global routing and failover</li>
-        <li>Azure landing zone with Hub‑Spoke, PIM, and BCDR automation</li>
-        <li>GCP data platform with Pub/Sub, Dataflow, BigQuery, and Looker</li>
-      </ul>
-    </section>
+        <article className="subpageCard">
+          <h2>Selected Designs</h2>
+          <ul>
+            {designs.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </section>
+    </main>
   );
 }
 

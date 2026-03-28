@@ -4,31 +4,52 @@ export const metadata = {
 };
 
 export default function DevOpsPage() {
+  const highlights = [
+    "GitHub Actions, GitLab CI, and Argo CD based delivery flows",
+    "Terraform modules and Crossplane for multi-cloud provisioning",
+    "Kubernetes (EKS/AKS/GKE), Helm, Kustomize, and OPA policy controls",
+    "Observability with Prometheus, Grafana, OpenTelemetry, Loki, ELK, and CloudWatch",
+    "Security controls: SAST/DAST, SCA, SBOMs, secrets governance, and workload identity",
+    "FinOps guardrails with right-sizing and cloud cost visibility",
+  ];
+
+  const sampleWork = [
+    "Reusable GitHub Actions templates for monorepos and service repositories",
+    "Terraform + Helm stack for EKS with blue/green and canary releases",
+    "Multi-account AWS landing zone with organization guardrails and OIDC federation",
+  ];
+
   return (
-    <section>
-      <h1>DevOps Portfolio</h1>
-      <p>
-        I design and operate resilient delivery platforms with CI/CD, GitOps, IaC, and
-        strong SRE practices across AWS, Azure, and GCP.
-      </p>
+    <main className="subpage">
+      <section className="subpageHero">
+        <p className="subpageKicker">DevOps</p>
+        <h1>Delivery platforms built for speed, reliability, and control</h1>
+        <p>
+          I design and operate resilient engineering systems with CI/CD, GitOps, IaC,
+          security automation, and practical SRE operations across AWS, Azure, and GCP.
+        </p>
+      </section>
 
-      <h2>Highlights</h2>
-      <ul>
-        <li>GitHub Actions, GitLab CI, and Argo CD based delivery flows</li>
-        <li>Terraform modules and Crossplane for multi-cloud provisioning</li>
-        <li>Kubernetes (EKS/AKS/GKE), Helm, Kustomize, and policy as code (OPA)</li>
-        <li>Observability: Prometheus/Grafana, OpenTelemetry, Loki, ELK, CloudWatch</li>
-        <li>Security: SAST/DAST, SCA, SBOMs, secrets management, workload identity</li>
-        <li>Cost optimization and FinOps guardrails</li>
-      </ul>
+      <section className="subpageGrid">
+        <article className="subpageCard">
+          <h2>Core Highlights</h2>
+          <ul>
+            {highlights.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
 
-      <h2>Sample Work</h2>
-      <ul>
-        <li>Reusable GitHub Actions workflow templates for monorepos and services</li>
-        <li>Terraform + Helm stacks for EKS with blue/green and canary strategies</li>
-        <li>Multi-account AWS landing zone with org guardrails and OIDC federation</li>
-      </ul>
-    </section>
+        <article className="subpageCard">
+          <h2>Sample Work</h2>
+          <ul>
+            {sampleWork.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </section>
+    </main>
   );
 }
 
