@@ -7,7 +7,7 @@
     "build": "next build",
     "postbuild": "mkdir -p out && touch out/.nojekyll",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out -b gh-pages -m 'deploy: update static build'",
+    "deploy": "gh-pages -d out -b gh-pages --dotfiles -m 'deploy: update static build'",
     "start": "next start",
     "lint": "eslint"
   },

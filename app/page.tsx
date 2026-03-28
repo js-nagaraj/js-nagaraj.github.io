@@ -97,7 +97,7 @@ const projects: Project[] = [
     image: "/thumbnails/mmi-connect.png",
     summary:
       "Business engagement platform connecting customers and exhibitors with event and order workflows.",
-    stack: ["Angular", ".NET", "MS SQL Server", "Azure", "CI/CD"],
+    stack: ["MS SQL Server", "Azure", "CI/CD"],
     website: "https://mmiconnect.in/",
   },
   {
@@ -105,7 +105,7 @@ const projects: Project[] = [
     image: "/thumbnails/svasthiya.png",
     summary:
       "Healthcare platform that digitizes and delivers medical images with secure anytime access.",
-    stack: ["React", "Node.js", "MongoDB", "GCP"],
+    stack: ["React", "Node.js", "Express.js", "MongoDB", "GCP"],
     website: "https://www.svasthiya.in/",
   },
   {
