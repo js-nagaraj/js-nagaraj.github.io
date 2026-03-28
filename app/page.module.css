@@ -1,7 +1,3 @@
-:global(html) {
-  scroll-behavior: smooth;
-}
-
 .page {
   --bg: #f6f8f4;
   --surface: rgba(255, 255, 255, 0.86);
